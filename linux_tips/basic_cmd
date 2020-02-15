@@ -9,3 +9,5 @@ awk '(NR>=0 && NR<=11){print} (NR=11){exit}' /path/to/file
 [ $PWD == $HOME ] || echo "You are home"
 mtr [ip]
 ethtool [name_of_net_dev]
+ip link show
+nmcli
