@@ -9,3 +9,12 @@ awk '(NR>=0 && NR<=11){print} (NR=11){exit}' /path/to/file
 [ $PWD == $HOME ] || echo "You are home"
 mtr [ip]
 ethtool [name_of_net_dev]
+
+# SELinux:
+getenforce
+sestatus
+vi /etc/selinux/config
+setmodule -l
+semanage boolean -l
+getsebool [module_name]
+setsebool [module_name] [0|1]
