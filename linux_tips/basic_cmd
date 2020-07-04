@@ -47,6 +47,6 @@ mkdir .ssh  #-> Log in as user_name and change to the home directory
 touch .ssh/authorized_keys
 chmod 700 .ssh
 chmod 600 .ssh/authorized_keys
-ssh-keygen
+ssh-keygen -R [ip_addr]
 ssh user_name@server_addr
 ssh-copy-id user_name@server_addr
